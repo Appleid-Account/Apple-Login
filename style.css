@@ -1,0 +1,243 @@
+/* 1. Global Reset & Typography */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1d1d1f;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* 2. Top Navigation (Appears after landing) */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #d2d2d7;
+    font-weight: 600;
+    font-size: 19px;
+    background: #fff;
+}
+
+/* 3. Main Wrapper & Containers */
+.main-wrapper {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* 4. Logo Animation States */
+#logo-container {
+    margin: 0 auto;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Initial State: Large Landing Logo */
+.logo-hero {
+    width: 240px;
+    height: 240px;
+    margin-bottom: 20px;
+}
+
+.logo-hero #apple-logo {
+    width: 100%;
+    height: auto;
+}
+
+/* Target State: Small Login Logo */
+.logo-small {
+    width: 100px;
+    height: 100px;
+    margin-top: -30px;
+    margin-bottom: 10px;
+}
+
+.logo-small #apple-logo {
+    width: 70px;
+}
+
+/* 5. Landing Page Specifics */
+#landing-section h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#landing-section .subtitle {
+    font-size: 19px;
+    color: #6e6e73;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* FIX: Smaller, centered Pill Button for Landing */
+#start-signin {
+    background: #0071e3;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+#start-signin:hover { background: #0077ed; }
+
+/* 6. Login Form Styling */
+.login-header { font-size: 28px; margin-bottom: 5px; }
+.login-sub { color: #6e6e73; font-size: 17px; margin-bottom: 30px; }
+
+.input-wrapper {
+    border: 1px solid #86868b;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 18px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Password Dropdown Animation */
+.field-collapsed {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.field-expanded {
+    max-height: 100px;
+    opacity: 1;
+    border-top: 1px solid #d2d2d7;
+}
+
+/* FIX: Checkbox Alignment (Box on Left) */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 35px;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.remember-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.remember-container label {
+    font-size: 14px;
+    color: #1d1d1f;
+    cursor: pointer;
+}
+
+.forgot-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 7. Button Group & Passkey Fix */
+.button-group {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.btn-blue {
+    background-color: #0071e3;
+    color: white;
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.passkey-container {
+    flex: 1;
+    text-align: center;
+}
+
+.btn-black {
+    background-color: #1d1d1f;
+    color: white;
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.requirement-text {
+    font-size: 11px;
+    color: #6e6e73;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+
+/* 8. FaceID Simulation Overlay */
+#faceid-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(15px);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+
+.faceid-hidden { display: none !important; }
+
+.faceid-card {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 9. Apple Footer */
+.apple-footer {
+    background-color: #f5f5f7;
+    padding: 40px 20px;
+    font-size: 12px;
+    color: #6e6e73;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.footer-content { max-width: 980px; margin: 0 auto; }
+.footer-bottom { display: flex; justify-content: space-between; margin-top: 15px; flex-wrap: wrap; gap: 10px; }
+.footer-links a { margin-right: 15px; color: #424245; text-decoration: none; }
+hr { border: none; border-top: 1px solid #d2d2d7; margin: 15px 0; }
+
+/* 10. Utility */
+.hidden { display: none; opacity: 0; }

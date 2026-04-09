@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-view"> <header class="top-nav hidden">
+        <span class="nav-title">Apple Account</span>
+        <div class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 18 18"><path d="M15 6l-6 6-6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+    </header>
+
+    <div class="main-wrapper">
+        <div id="logo-container" class="logo-hero">
+            <img src="logo.PNG" id="apple-logo" alt="Apple Account">
+        </div>
+
+        <div id="landing-section">
+            <h1>One account for everything Apple.</h1>
+            <p class="subtitle">A single Apple Account and password gives you access to all Apple services.</p>
+            <button id="start-signin" class="btn-blue">Sign In</button>
+        </div>
+
+        <div id="login-section" class="hidden">
+            <h1 class="login-header">Apple Account</h1>
+            <p class="login-sub">Manage your Apple Account</p>
+
+            <form id="loginForm">
+                <div class="input-wrapper">
+                    <input type="email" id="email" placeholder="Email or Phone Number" required>
+                    <div id="password-section" class="field-collapsed">
+                        <input type="password" id="password" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="options-row">
+    <div class="remember-container">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember me</label>
+    </div>
+    <a href="#" class="forgot-link">Forgotten your password? ↗</a>
+</div>
+
+                <div class="button-group">
+                    <button type="submit" id="mainBtn" class="btn-blue">Continue</button>
+                    <div class="passkey-container">
+                        <button type="button" id="passkeyBtn" class="btn-black">
+                            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/user--v1.png" width="16">
+                            Sign in with Passkey
+                        </button>
+                        <p class="requirement-text">Requires iOS 17 or macOS Sonoma or later.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="faceid-overlay" class="faceid-hidden">
+        <div class="faceid-card">
+            <img src="https://img.icons8.com/ios/100/000000/face-id.png" alt="FaceID">
+            <p>Face ID</p>
+        </div>
+    </div>
+
+    <footer class="apple-footer">
+        <div class="footer-content">
+            <p>More ways to shop: <a href="#">find an Apple Store</a> or <a href="#">other retailer</a> near you. Or call 0800 048 0408.</p>
+            <p class="country">United Kingdom</p>
+            <hr>
+            <div class="footer-bottom">
+                <span>Copyright © 2026 Apple Inc. All rights reserved.</span>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sales and Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
